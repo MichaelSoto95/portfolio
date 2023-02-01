@@ -11,6 +11,21 @@
 
     })
 
+
+//     const links = document.querySelectorAll(" .ul .a");
+// for (const link of links) {
+//   link.addEventListener("click", clickHandler);
+// }
+// function clickHandler(e) {
+//   e.preventDefault();
+//   const href = this.getAttribute("href");
+//   const offsetTop = document.querySelector(href).offsetTop;
+//   scroll({
+//     top: offsetTop,
+//     behavior: "smooth"
+//   });
+// }
+
     // const Mydiv=document.getElementById("mydiv");
 // const topCount =25;
 

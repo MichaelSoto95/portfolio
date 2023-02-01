@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Inconsolata";
+}
+html{
+ scroll-behavior: smooth;
 }
 
 .navbar {
@@ -35,12 +38,19 @@
   height: 50px;
   border-radius: 25px;
   cursor: pointer;
+  display: none;
+}  .navbar .logo {
+
+  display: flex;
+  align-items: center;
+  justify-content: ce;
+  font-size: 50px;
 }
 .navbar a :hover {
   transform: scale(1.2);
 }
 .navbar li :hover {
-  color: yellow;
+  color:#ffc506;
 }
 .menuline {
   height: 3px;
@@ -53,6 +63,10 @@
   display: none;
 }
 
+.dot{
+  color:#ffc506;
+
+}
 @media all and (max-width: 580px) {
   .navbar {
     display: flex;
@@ -91,9 +105,12 @@
     display: none;
     flex-direction: column;
   }
-  .navbar .logo {
-    width: 100%;
+
+  .logo .a{
+    font-size:100px;
+   
   }
+
   .icon {
     margin-left: 10px;
     margin-top: 10px;
@@ -105,9 +122,119 @@
 }
 
 .main-container {
-  height: 100vh;
-  padding-top: 100px;
+ min-height: 100vh;
+/* background-color: lightslategray; */
+  display: grid;
+grid-template-columns: 1fr 1fr;
+
+
 }
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-pic{
+border-radius: 5px;
+}
+.textcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.textcontainer h1{
+  font-size: 100px;
+}
+.textcontainer p{
+  font-size: 25px;
+}
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color:  #1e1e2b;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+  cursor: pointer;
+
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color:#1e1e2b;
+  transition: .5s ease;
+
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: .3s;
+}
+
+.btn:hover::before {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: .4s ease;
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.2s;
+  color: aliceblue;
+}
+@media all and (max-width: 580px) {
+  .main-container{
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-pic{
+    transform: scale(50%);
+  }
+}
+
+/* about */
+.about-container{
+  min-height: 100vh;
+background-color: #ffc506 ;
+}
+/* information */
+.info-container{
+  min-height: 100vh;
+  background-color: red ;
+}
+/* information */
+
+/* contact */
+.contact-container{
+  min-height: 100vh;
+  background-color: #b0b0b0 ;
+}
+/* contact */
+
+/* about */
 
 .footer {
   width: 100%;
