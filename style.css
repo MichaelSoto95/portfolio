@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inconsolata";
+  /* outline: solid 0.25rem hsla(0, 90%, 46%, 0.5); */
+
 }
 html{
  scroll-behavior: smooth;
@@ -17,7 +19,8 @@ html{
   justify-content: space-around;
   align-items: center;
   z-index: 99;
-  box-shadow: 1px 27px 46px -9px rgba(26, 25, 25, 0.23)
+  box-shadow: 1px 27px 46px -9px rgba(26, 25, 25, 0.83);
+  transition: all 0.3s ease-in-out;
 }
 .navlist {
   display: inline-block;
@@ -45,6 +48,7 @@ html{
   align-items: center;
   justify-content: center;
   font-size: 50px;
+  transition: ease-in .2s;
 }
 .logo a:hover {
  color: #ffc506;
@@ -65,7 +69,13 @@ html{
 .burger-menu {
   display: none;
 }
+.navbar.nav-active {
+  padding: 10px 0;
+}
+.navbar.nav-active .logo{
+  transform: scale(1.1);
 
+}
 .dot{
   color:#ffc506;
 
@@ -111,7 +121,7 @@ html{
 
   .logo .a{
     font-size:100px;
-   
+  
   }
 
   .icon {
@@ -126,10 +136,10 @@ html{
 
 .main-container {
  min-height: 100vh;
- background-color:cornflowerblue; 
-  display: grid;
-grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  display: flex;
+justify-content: center;
 z-index: -1;
+width: 100%;
 
 
 }
@@ -140,6 +150,8 @@ z-index: -1;
 }
 .main-pic{
 border-radius: 5px;
+height: 280px;
+
 }
 .textcontainer{
   display: flex;
@@ -212,15 +224,29 @@ border-radius: 5px;
   transition-delay: 0.2s;
   color: aliceblue;
 }
+@media all and (max-width: 900px) {
+  .main-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
 @media all and (max-width: 580px) {
   .main-container{
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
+   margin-bottom: 10px;
+  }
+  .main-container h1 {
+  font-size: 50px;
   }
   .main-pic{
-    transform: scale(60%);
+    transform: scale(75%);
   }
+
 }
 
 /* about */
@@ -252,12 +278,16 @@ gap: 50px;
 width: 325px;
   background-color: white;
   border-radius: 5px;
-  height: 50vh;
+  height: auto;
  gap: 20px;
+ transition: ease-in .3s;
+}
+.card:hover{
+  transform: scale(1.05);
 }
 .card img{
   height: 100px;
-  
+  padding: 5px;
 }
 .card-text{
   display: flex;
@@ -266,6 +296,7 @@ width: 325px;
   gap: 25px;
   text-align: center;
   align-items: center;
+  padding: 5px;
 }
 .card button{
   border: none;

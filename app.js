@@ -11,6 +11,18 @@
 
     })
 
+    
+const nav = document.querySelector('.navbar')
+window.addEventListener('scroll', fixNav)
+
+function fixNav() {
+    if(window.scrollY > nav.offsetHeight + 150) {
+        nav.classList.add('nav-active')
+    } else {
+        nav.classList.remove('nav-active')
+    }
+}
+
     // let lastScrollTop = 0;
 
     // // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
