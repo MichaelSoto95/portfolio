@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inconsolata";
-  /* outline: solid 0.25rem hsla(0, 90%, 46%, 0.5); */
+ /* outline: solid 0.25rem hsla(0, 90%, 46%, 0.5); */
+ overflow-x: hidden;
 
 }
 html{
@@ -58,6 +59,7 @@ html{
  }
 .navbar li :hover {
   color:#ffc506;
+
 }
 .menuline {
   height: 3px;
@@ -73,17 +75,23 @@ html{
   padding: 10px 0;
 }
 .navbar.nav-active .logo{
-  transform: scale(1.1);
+  transform: scale(1.03);
 
 }
 .dot{
   color:#ffc506;
 
 }
+.li-active{
+  color: #ffc506;
+  text-decoration: underline;
+}
 @media all and (max-width: 580px) {
   .navbar {
     display: flex;
     flex-direction: column;
+
+align-items: start;
   }
   .burger-menu {
     display: block;
@@ -92,6 +100,9 @@ html{
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+  .logo{
+    padding-left: 20px;
   }
   #toggle-button.is-active .menuline:nth-child(2) {
     opacity: 0;
@@ -136,8 +147,9 @@ html{
 
 .main-container {
  min-height: 100vh;
-  display: flex;
+  display: grid;
 justify-content: center;
+grid-template-columns: 1fr 1fr;
 z-index: -1;
 width: 100%;
 
@@ -147,10 +159,12 @@ width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
 }
 .main-pic{
 border-radius: 5px;
-height: 280px;
+max-width: 100%;
+max-height: 100%;
 
 }
 .textcontainer{
@@ -226,16 +240,14 @@ height: 280px;
 }
 @media all and (max-width: 900px) {
   .main-container{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    grid-template-columns: 1fr;
   }
 
 }
-@media all and (max-width: 580px) {
+@media all and (max-width: 550px) {
   .main-container{
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 400px;
     align-items: center;
     justify-content: center;
    margin-bottom: 10px;
@@ -243,9 +255,7 @@ height: 280px;
   .main-container h1 {
   font-size: 50px;
   }
-  .main-pic{
-    transform: scale(75%);
-  }
+
 
 }
 
@@ -280,10 +290,13 @@ width: 325px;
   border-radius: 5px;
   height: auto;
  gap: 20px;
- transition: ease-in .3s;
+ transition: ease-in .1s;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 }
 .card:hover{
-  transform: scale(1.05);
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .card img{
   height: 100px;

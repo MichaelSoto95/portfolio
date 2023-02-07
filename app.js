@@ -10,8 +10,12 @@
         toggleButton.classList.toggle('is-active');
 
     })
+    function closeNav(){
+        NavList.classList.remove('active');
+        toggleButton.classList.remove('is-active');
+    }
 
-    
+    //se puede hacer para que aparezcan las cosas
 const nav = document.querySelector('.navbar')
 window.addEventListener('scroll', fixNav)
 
@@ -22,6 +26,26 @@ function fixNav() {
         nav.classList.remove('nav-active')
     }
 }
+
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll(' li a')
+
+window.addEventListener('scroll', ()=> {
+    let current = "";
+    sections.forEach( section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if(scrollY >= (sectionTop - sectionHeight/3)){
+            current = section.getAttribute('id');
+        }
+    })
+    navLi.forEach( a => {
+        a.classList.remove('li-active');
+        if(a.classList.contains(current)){
+            a.classList.add('li-active')
+        }
+    })
+})
 
     // let lastScrollTop = 0;
 
