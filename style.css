@@ -150,9 +150,10 @@ align-items: start;
   display: grid;
 justify-content: center;
 grid-template-columns: 1fr 1fr;
-z-index: -1;
+z-index: -2;
 width: 100%;
-
+background: linear-gradient(#fff,#ffc506);
+  
 
 }
 .img-container {
@@ -163,8 +164,8 @@ width: 100%;
 }
 .main-pic{
 border-radius: 5px;
-max-width: 100%;
-max-height: 100%;
+max-width: 95%;
+max-height: 95%;
 
 }
 .textcontainer{
@@ -262,7 +263,7 @@ max-height: 100%;
 /* about */
 .about-container{
   min-height: 100vh;
-background-color: #ffc506 ;
+  background: linear-gradient(#ffc506, #fff);
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -334,18 +335,88 @@ width: 325px;
 /* information */
 .info-container{
   min-height: 100vh;
-  background-color: red ;
+  background: linear-gradient( #fff,#ffc506);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
 }
+.info-container h1{
+  font-size: 50px;
+}
+.icon-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.icon-container img{
+  height: 300px;
+}
+
+.info-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.text-info-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.text-info-container p{
+font-size: 25px;
+width: 90%;
+
+}
+
 /* information */
 
 /* contact */
 .contact-container{
   min-height: 100vh;
-  background-color: #b0b0b0 ;
-}
+    background: linear-gradient(#ffc506,#fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .contact-container h1{
+    font-size: 50px;
+  }
+  .contact-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+  }
+  .contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contact-info-container img{
+    height: 200px;
+    transition: ease-in .3s;
+    cursor: pointer;
+  }
+  .contact-info-container img:hover{
+    transform: rotateZ(360deg);
+  }
+  .contact-info-container h4{
+    font-size: 30px;
+  }
+
 /* contact */
 
-/* about */
+/* footer */
 
 .footer {
   width: 100%;

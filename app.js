@@ -1,51 +1,34 @@
 
-    const toggleButton = document.getElementById('toggle-button');
-    const NavList =document.getElementById('nav-list');
+const toggleButton = document.getElementById('toggle-button');
+const NavList = document.getElementById('nav-list');
 
 
-    toggleButton.addEventListener('click',() =>{
+toggleButton.addEventListener('click', () => {
 
-        NavList.classList.toggle('active');
+    NavList.classList.toggle('active');
 
-        toggleButton.classList.toggle('is-active');
+    toggleButton.classList.toggle('is-active');
 
-    })
-    function closeNav(){
-        NavList.classList.remove('active');
-        toggleButton.classList.remove('is-active');
-    }
+})
+function closeNav() {
+    NavList.classList.remove('active');
+    toggleButton.classList.remove('is-active');
 
-    //se puede hacer para que aparezcan las cosas
+}
+
+//se puede hacer para que aparezcan las cosas
 const nav = document.querySelector('.navbar')
 window.addEventListener('scroll', fixNav)
 
 function fixNav() {
-    if(window.scrollY > nav.offsetHeight + 150) {
+    if (window.scrollY > nav.offsetHeight + 150) {
         nav.classList.add('nav-active')
     } else {
         nav.classList.remove('nav-active')
     }
+
 }
 
-const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll(' li a')
-
-window.addEventListener('scroll', ()=> {
-    let current = "";
-    sections.forEach( section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if(scrollY >= (sectionTop - sectionHeight/3)){
-            current = section.getAttribute('id');
-        }
-    })
-    navLi.forEach( a => {
-        a.classList.remove('li-active');
-        if(a.classList.contains(current)){
-            a.classList.add('li-active')
-        }
-    })
-})
 
     // let lastScrollTop = 0;
 
