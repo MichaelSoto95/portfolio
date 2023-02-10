@@ -14,18 +14,57 @@ function closeNav() {
     NavList.classList.remove('active');
     toggleButton.classList.remove('is-active');
 
+
+
 }
 
 //se puede hacer para que aparezcan las cosas
 const nav = document.querySelector('.navbar')
-window.addEventListener('scroll', fixNav)
+const infoText = document.getElementById('info-text');
+const infoIcon = document.getElementById('info-icon');
+const Main = document.querySelector('.main-container')
+const About = document.querySelector('.about-container')
+const Card = document.getElementById('Cards');
+const Info = document.querySelector('.info-container')
 
+const NavAbout = document.getElementById('nav-about');
+const NavInfo = document.getElementById('nav-info');
+const NavContact = document.getElementById('nav-contact');
+window.addEventListener('scroll', fixNav)
 function fixNav() {
     if (window.scrollY > nav.offsetHeight + 150) {
         nav.classList.add('nav-active')
+
+
     } else {
         nav.classList.remove('nav-active')
+
     }
+
+    if (window.scrollY > Main.offsetHeight - 100) {
+
+        Card.classList.add('active-info');
+        NavAbout.classList.add('li-active');
+
+    } else {
+
+        Card.classList.remove('active-info');
+        NavAbout.classList.remove('li-active');
+    }
+
+    if (window.scrollY > About.offsetHeight) {
+
+        infoText.classList.add('active-info');
+        infoIcon.classList.add('active-info');
+        NavInfo.classList.add('li-active');
+
+    } else {
+
+        infoText.classList.remove('active-info');
+        infoIcon.classList.remove('active-info');
+        NavInfo.classList.remove('li-active');
+    }
+
 
 }
 

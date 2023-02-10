@@ -251,7 +251,7 @@ max-height: 95%;
     grid-template-columns: 400px;
     align-items: center;
     justify-content: center;
-   margin-bottom: 10px;
+
   }
   .main-container h1 {
   font-size: 50px;
@@ -280,6 +280,8 @@ gap: 50px;
   justify-content: center; 
   gap:50px;
   flex-wrap: wrap;
+  transform: translateX(150%);
+  transition: ease-in .3s;
 }
 .card{
   display: flex;
@@ -294,7 +296,9 @@ width: 325px;
  transition: ease-in .1s;
  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
+
 }
+
 .card:hover{
 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -349,6 +353,10 @@ width: 325px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateX(-100%);
+  transition: ease-in .5s;
+  transition-delay: 300ms;
+
   
 }
 .icon-container img{
@@ -365,12 +373,25 @@ width: 325px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(100%);
+  transition: ease-in .5s ;
+  transition-delay: 500ms;
 
+}
+.active-info{
+  transform: translateX(0%);
 }
 .text-info-container p{
 font-size: 25px;
 width: 90%;
 
+}
+@media all and (max-width: 550px) {
+  .info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 
 /* information */
@@ -413,6 +434,14 @@ width: 90%;
   .contact-info-container h4{
     font-size: 30px;
   }
+  @media all and (max-width: 550px) {
+    .contact-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 50px;
+  }
+}
 
 /* contact */
 

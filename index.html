@@ -20,9 +20,9 @@
           <a href="#">Michael<span class="dot">.</span>Soto</a>
       </div>
       <ul class="navlist" id="nav-list">
-        <li class="list-item"><a href="#about" onclick="closeNav()">About Me</a></li>
-        <li class="list-item"><a href="#information" onclick="closeNav()">Information</a></li>
-        <li class="list-item"><a href="#contact" onclick="closeNav()">Contact</a></li>
+        <li class="list-item" id="nav-about"><a href="#about" onclick="closeNav()">About Me</a></li>
+        <li class="list-item" id="nav-info"><a href="#information" onclick="closeNav()">Information</a></li>
+        <li class="list-item" id="nav-contact"><a href="#contact" onclick="closeNav()">Contact</a></li>
       </ul>
       <div class="burger-menu" id="toggle-button">
         <div class="menuline"></div>
@@ -46,7 +46,7 @@
         </div>
         <section class="about-container"id="about">
      <h1>About Me</h1>
-     <div class="cards-container">
+     <div class="cards-container" id="Cards">
       <div class="card">  
        <img src="/images/camera-solid.svg" alt="">
         <div class="card-text">
@@ -85,8 +85,8 @@
         <section class="info-container"id="information">
           <h1>Information</h1>
           <div class="info-wrapper">
-            <div class="icon-container"><img src="/images/user-solid.svg" alt=""></div>
-            <div class="text-info-container">
+            <div class="icon-container" id="info-icon"><img src="/images/user-solid.svg" alt=""></div>
+            <div class="text-info-container" id="info-text">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolores rerum pariatur similique debitis.
                 Ea odit eum nemo, nihil, nam quo fuga reiciendis, pariatur perferendis aperiam vel tempore iusto eos!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, commodi esse! Consectetur unde hic a recusandae 
@@ -99,11 +99,11 @@
         <section class="contact-container"id="contact">
           <h1>Contact</h1>
           <div class="contact-wrapper">
-            <div class="contact-info-container"><img src="/images/envelope-solid.svg" alt="">
+            <div class="contact-info-container"><a href="mailto:michaelsotorod95@gmail.com"><img src="/images/envelope-solid.svg" alt=""></a>
             <h4>Email</h4></div>
-            <div class="contact-info-container"><img src="/images/file-solid.svg" alt="">
+            <div class="contact-info-container"><a href="images/Resume actualizado2022.pdf" target="#blank"><img src="/images/file-solid.svg" alt=""></a>
             <h4>Resume</h4></div>
-            <div class="contact-info-container"><img src="/images/phone-solid.svg" alt="">
+            <div class="contact-info-container"><a href="tel:787-202-5981"><img src="/images/phone-solid.svg" alt=""></a>
             <h4>Phone</h4></div>
           </div>
              </section> 
