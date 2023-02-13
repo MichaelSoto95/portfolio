@@ -354,8 +354,8 @@ width: 325px;
   align-items: center;
   justify-content: center;
   transform: translateX(-100%);
-  transition: ease-in .5s;
-  transition-delay: 300ms;
+  transition: ease-in .3s;
+  transition-delay: 20ms;
 
   
 }
@@ -374,8 +374,8 @@ width: 325px;
   justify-content: center;
   align-items: center;
   transform: translateX(100%);
-  transition: ease-in .5s ;
-  transition-delay: 500ms;
+  transition: ease-in .3s ;
+  transition-delay: 50ms;
 
 }
 .active-info{
@@ -415,6 +415,7 @@ width: 90%;
     align-items: center;
     justify-content: center;
     gap: 200px;
+
   }
   .contact-info-container{
     display: flex;
@@ -422,14 +423,17 @@ width: 90%;
     justify-content: center;
     flex-direction: column;
     gap: 40px;
+    text-align: center;
   }
   .contact-info-container img{
-    height: 200px;
+    height: 50%;
+    width: 50%;
     transition: ease-in .3s;
     cursor: pointer;
   }
   .contact-info-container img:hover{
-    transform: rotateZ(360deg);
+    /* transform: rotateZ(360deg); */
+   opacity: .7;
   }
   .contact-info-container h4{
     font-size: 30px;
