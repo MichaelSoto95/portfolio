@@ -78,7 +78,10 @@ function fixNav() {
 
 
 }
-
+let card = document.getElementById('card');
+function activeCard () {
+    card.classList.toggle('active-card');
+}
 
     // let lastScrollTop = 0;
 

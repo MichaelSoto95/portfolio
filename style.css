@@ -293,10 +293,8 @@ width: 325px;
   border-radius: 5px;
   height: auto;
  gap: 20px;
- transition: ease-in .1s;
+ transition: ease-in .3s;
  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-
 }
 
 .card:hover{
@@ -330,6 +328,12 @@ width: 325px;
   background-color: #212122;
   color: #ffc506;
   
+}
+.active-card{
+ transform: rotateY(180deg);
+
+
+
 }
 @media all and (max-width: 580px) {
   .cards-container{
