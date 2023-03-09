@@ -32,7 +32,7 @@ const NavInfo = document.getElementById('nav-info');
 const NavContact = document.getElementById('nav-contact');
 window.addEventListener('scroll', fixNav)
 function fixNav() {
-    if (window.scrollY > nav.offsetHeight + 150) {
+    if (window.scrollY > nav.offsetHeight) {
         nav.classList.add('nav-active')
 
 
@@ -41,7 +41,7 @@ function fixNav() {
 
     }
 
-    if (window.scrollY > Main.offsetHeight - nav.offsetHeight ) {
+    if (window.scrollY > Main.offsetHeight - nav.offsetHeight) {
 
         Card.classList.add('active-info');
         NavAbout.classList.add('li-active');
@@ -52,7 +52,7 @@ function fixNav() {
         NavAbout.classList.remove('li-active');
     }
 
-    if (window.scrollY > About.offsetHeight+Main.offsetHeight -nav.offsetHeight ) {
+    if (window.scrollY > About.offsetHeight + Main.offsetHeight - nav.offsetHeight) {
 
         infoText.classList.add('active-info');
         infoIcon.classList.add('active-info');
@@ -66,10 +66,10 @@ function fixNav() {
         NavInfo.classList.remove('li-active');
     }
 
-    if (window.scrollY > About.offsetHeight+Main.offsetHeight+infoIcon.offsetHeight -nav.offsetHeight ) {
+    if (window.scrollY > About.offsetHeight + Main.offsetHeight + infoIcon.offsetHeight - nav.offsetHeight) {
 
-               NavContact.classList.add('li-active');
-               NavInfo.classList.remove('li-active');
+        NavContact.classList.add('li-active');
+        NavInfo.classList.remove('li-active');
 
     } else {
 
@@ -79,9 +79,12 @@ function fixNav() {
 
 }
 let card = document.getElementById('card');
-function activeCard () {
+function activeCard() {
     card.classList.toggle('active-card');
+    card.innerText = "Hiii";
 }
+
+console.log('hellooo');
 
     // let lastScrollTop = 0;
 

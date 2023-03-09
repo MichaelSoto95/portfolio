@@ -154,7 +154,7 @@ z-index: -2;
 width: 100%;
 background: linear-gradient(#fff,#ffc506);
   
-
+margin-top: 35px;
 }
 .img-container {
   display: flex;
@@ -364,12 +364,12 @@ width: 325px;
   
 }
 .icon-container img{
-  height: 300px;
+ width: 85%;
+  border-radius: 5px;
 }
 
 .info-wrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -387,8 +387,9 @@ width: 325px;
 }
 .text-info-container p{
 font-size: 25px;
-width: 90%;
-
+ width: 85%;
+text-align: justify;
+padding: 10px;
 }
 @media all and (max-width: 550px) {
   .info-wrapper{
